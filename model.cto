@@ -1,0 +1,84 @@
+/*
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+
+* distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
+/**
+* Sample business network definition.
+*/
+namespace org.example.basic
+
+asset Property identified by PID {
+o String PID
+o String owner
+o Integer mktprice
+o String RegistrationDate
+o String PropertyType
+o String Location
+o String Status default= &#39;Registered&#39;
+o Boolean IntentForSale
+o Boolean Public
+o Boolean Private
+}
+
+asset PropertyListing identified by PLID {
+
+o String PLID
+o String owner
+o Integer mktprice
+o String RegistrationDate
+o String PropertyType
+o String Location
+o String Status default= &#39;IntentForSale&#39;
+}
+participant Buyer identified by Bname {
+o String Bname
+o String Bemail
+o Integer Aadhar
+o String BankName
+o String BankAddress
+o Integer AccNo
+o String IFSCCode
+o Integer BBalance
+}
+
+participant Seller identified by Sname {
+o String Sname
+o String Semail
+o Integer Aadhar
+o String BankName
+o String BankAddress
+
+o Integer AccNo
+o String IFSCCode
+o Integer SBalance
+o String SaleDeedDoc
+}
+participant Registrar identified by Rname {
+o String Rname
+o String Remail
+}
+transaction Created {
+o String PID
+--> Property cproperty
+}
+transaction Registered {
+o String PID
+--> PropertyListing rpropertylisting
+}
+transaction IntentForSale {
+--> Property property
+--> PropertyListing propertylisting
+--> Buyer buyer
+--> Seller seller
+}
