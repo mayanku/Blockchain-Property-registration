@@ -12,5 +12,5 @@ In transaction IntentForSale,Property which is for sale and are checked as Priva
 Property which are for sale and are checked as Public are taken from PropertyListing asset and Sales transaction is done. After the transaction takes place, there is a change in Buyer and Sellers Balance, Property Owner and the Status from IntentForSale to Registered<br>
 In transaction Registered, the property value whose Status is Registered are added to the Property asset and removed from PropertyListing asset.
 <div align="center">
-  <a href="https://drive.google.com/open?id=1Ok1oYLdaGeEBVx7xW7r3TVUEgWTGMJ5M"><img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="IMAGE ALT TEXT"></a>
+  <a href="https://drive.google.com/open?id=1Ok1oYLdaGeEBVx7xW7r3TVUEgWTGMJ5M"><img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/Screenshot%20(94).png" alt="IMAGE ALT TEXT"></a>
 </div>
