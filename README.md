@@ -11,5 +11,6 @@ In transaction Created we are changing the status of the property if IntentForSa
 In transaction IntentForSale,Property which is for sale and are checked as Private are taken from Property asset and Sales transaction is done. <br>
 Property which are for sale and are checked as Public are taken from PropertyListing asset and Sales transaction is done. After the transaction takes place, there is a change in Buyer and Sellers Balance, Property Owner and the Status from IntentForSale to Registered<br>
 In transaction Registered, the property value whose Status is Registered are added to the Property asset and removed from PropertyListing asset.
-<a href="https://mail.google.com/mail/u/0/?tab=wm#search/harshularora97%40gmail.com/165001b2c01b6308?projector=1" target="_blank"><img src="https://mail.google.com/mail/u/0/?tab=wm#search/harshularora97%40gmail.com/165001b2c01b6308?projector=1" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<div align="center">
+  <a href="https://drive.google.com/open?id=1Ok1oYLdaGeEBVx7xW7r3TVUEgWTGMJ5M"><img src="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
