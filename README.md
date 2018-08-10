@@ -13,6 +13,7 @@ PropertyListing will contain only property which are for sale
 <p>In transaction <b>Registered</b>, the property value whose Status is Registered are added to the Property asset and removed from PropertyListing asset.</p>
 <h3>To test this Business Network Definition in the Test tab:</h3>
 <p>In the Buyer participant registry, create a new participant.</p>
+<img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/p1.png">
 <h3> Click on the image and check the demo video</h3>
 <div align="center">
   <a href="https://drive.google.com/open?id=1Ok1oYLdaGeEBVx7xW7r3TVUEgWTGMJ5M"><img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/Screenshot%20(94).png" alt="IMAGE ALT TEXT"></a>
