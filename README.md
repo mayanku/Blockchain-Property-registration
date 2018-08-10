@@ -4,7 +4,7 @@ It is a mere record of sales transaction using Blockchain technology developed u
 
 Overview of the Network:-
 1. Participants: Buyer, Seller, Registrar
-2. Assets: Property, PropertyListing
+2. Assets: Property, PropertyListing <br>
 PropertyListing will contain only property which are for sale
 3. Transactions: Created, IntentForSale, Registered <br>
 <p>In transaction Created we are changing the status of the property if IntentForSale is checked and if Public is also checked, the asset value is added to the PropertyListing asset.<br/></p>
