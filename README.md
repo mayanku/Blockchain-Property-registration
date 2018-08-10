@@ -42,8 +42,10 @@ To make a sale agreement between Buyer and Seller, “IntentForSale” transacti
 <p>After “IntentForSale” transaction has been completed, the status changes to “Registered”.</p>
 <p>In “Registered” transaction, the Properties under “PropertyListing” asset and have status “Registered” are added under “Property” asset and removed from “PropertyListing” asset.</p>
 <img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/p12.png">
-<bold>Congratulations!</bold>
+<b>Congratulations!</b>
 <p>The sales transaction has been done between Buyer and seller, now the Property owner has been changed, Buyer and Seller balance has been updated.</p>
+<b>License</b>
+<p>Hyperledger Project source code files are made available under the Apache License, Version 2.0 (Apache-2.0), located in the LICENSE file. Hyperledger Project documentation files are made available under the Creative Commons Attribution 4.0 International License (CC-BY-4.0), available at http://creativecommons.org/licenses/by/4.0/.</p>
 <h3> Click on the image and check the demo video</h3>
 <div align="center">
   <a href="https://drive.google.com/open?id=1Ok1oYLdaGeEBVx7xW7r3TVUEgWTGMJ5M"><img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/Screenshot%20(94).png" alt="IMAGE ALT TEXT"></a>
