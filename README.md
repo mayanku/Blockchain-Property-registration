@@ -32,9 +32,16 @@ Property which are for "ForSale" can only be there under PropertyListing asset.
 <img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/p8.png">
 2.	Property which is for “IntentForSale” and is “Private”. Therefore, only status for this property will change and it will not be added in “PropertyListing” asset.
 <img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/p9.png">
+In “Created” Transaction, we have taken PID= “2” as Property asset or PropertyListing asset may have different unique ID, therefore, we are taking PID which is unique.
+To make a sale agreement between Buyer and Seller, “IntentForSale” transaction is submitted. Here we have two cases:-
+1.	Property which are “IntentForSale” and are “Private” can be sold only from “Property” asset. Therefore, we will make a contract for these properties individually.
+<img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/p10.png">
+2.	Property which are “IntentForSale” and are “Public” can be sold only from “PropertyListing” asset. Therefore, we will make a contract for these properties individually.
+<img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/p11.png">
+
 <p>After “IntentForSale” transaction has been completed, the status changes to “Registered”.</p>
 <p>In “Registered” transaction, the Properties under “PropertyListing” asset and have status “Registered” are added under “Property” asset and removed from “PropertyListing” asset.</p>
-<img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/p10.png">
+<img src="https://github.com/mayanku/Blockchain-Property-registration/blob/master/p12.png">
 <bold>Congratulations!</bold>
 <p>The sales transaction has been done between Buyer and seller, now the Property owner has been changed, Buyer and Seller balance has been updated.</p>
 <h3> Click on the image and check the demo video</h3>
