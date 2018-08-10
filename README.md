@@ -7,8 +7,8 @@ Overview of the Network:-
 2. Assets: Property, PropertyListing
 PropertyListing will contain only property which are for sale
 3. Transactions: Created, IntentForSale, Registered <br>
-In transaction Created we are changing the status of the property if IntentForSale is checked and if Public is also checked, the asset value is added to the PropertyListing asset.<br/>
-In transaction IntentForSale,Property which is for sale and are checked as Private are taken from Property asset and Sales transaction is done. <br>
+<p>In transaction Created we are changing the status of the property if IntentForSale is checked and if Public is also checked, the asset value is added to the PropertyListing asset.<br/></p>
+<p>In transaction IntentForSale,Property which is for sale and are checked as Private are taken from Property asset and Sales transaction is done. <br></p>
 <p>Property which are for sale and are checked as Public are taken from PropertyListing asset and Sales transaction is done. After the transaction takes place, there is a change in Buyer and Sellers Balance, Property Owner and the Status from IntentForSale to Registered<br></p>
 <p>In transaction Registered, the property value whose Status is Registered are added to the Property asset and removed from PropertyListing asset.</p>
 <h3> Click on the image and check the demo video</h3>
