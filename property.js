@@ -16,7 +16,7 @@
 
 /**
 * Sample transaction processor function.
-* @param {org.example.basic.IntentForSale} tx The sample transaction instance.
+* @param {org.example.empty.IntentForSale} tx The sample transaction instance.
 * @transaction
 */
 async function sampleTransaction(tx) { // eslint-disable-line no-unused-vars
@@ -24,25 +24,25 @@ async function sampleTransaction(tx) { // eslint-disable-line no-unused-vars
 console.log(&#39;### onsampleTransaction &#39; + tx.toString());
 if(tx.property.owner== tx.seller.Sname){ //check in property asset
 
-if(tx.property.Status==&quot;IntentForSale&quot;){ // Run only for Sale + Private
+if(tx.property.Status=="IntentForSale"){ // Run only for Sale + Private
 if(tx.property.Private=true){
 // Save the value of the property.
 const MktValue = tx.property.mktprice;
 var owner= tx.property.owner;
-alert(&quot;Old Owner is &quot; + owner);
+alert("Old Owner is " + owner);
 var bbalance= tx.buyer.BBalance; //Buyer Balance
 var sbalance= tx.seller.SBalance; //Seller Balance
 
-if(bbalance&gt;= MktValue) {
+if(bbalance>= MktValue) {
 bbalance = bbalance- MktValue;
-alert(&quot;New Bbalance is &quot; + bbalance);
+alert("New Bbalance is " + bbalance);
 tx.buyer.BBalance=bbalance;
 tx.property.owner=tx.buyer.Bname;
-tx.property.Status=&quot;Registered&quot;;
-alert(&quot;New owner is &quot; + tx.property.owner);
-alert(&quot;Status is &quot; + tx.property.Status);
+tx.property.Status="Registered";
+alert("New owner is" + tx.property.owner);
+alert("Status is " + tx.property.Status);
 sbalance= sbalance+ MktValue;
-alert(&quot;New Sbalance is &quot; + sbalance);
+alert("New Sbalance is" + sbalance);
 tx.seller.SBalance=sbalance;
 
 const OwnerRegistry = await getAssetRegistry(&#39;org.example.basic.Property&#39;);
@@ -69,26 +69,26 @@ await SellerRegistry.update(tx.seller);
 
 else{
 if(tx.propertylisting.owner== tx.seller.Sname){
-if(tx.propertylisting.Status==&quot;IntentForSale&quot;){
+if(tx.propertylisting.Status=="IntentForSale"){
 
 // Save the value of the property.
 const MktValue = tx.propertylisting.mktprice;
 var owner= tx.propertylisting.owner;
 
-alert(&quot;Old Owner is &quot; + owner);
+alert("Old Owner is " + owner);
 var bbalance= tx.buyer.BBalance; //Buyer Balance
 var sbalance= tx.seller.SBalance; //Seller Balance
 
-if(bbalance&gt;= MktValue) {
+if(bbalance>= MktValue) {
 bbalance = bbalance- MktValue;
-alert(&quot;New Bbalance is &quot; + bbalance);
+alert("New Bbalance is" + bbalance);
 tx.buyer.BBalance=bbalance;
 tx.propertylisting.owner=tx.buyer.Bname;
-tx.propertylisting.Status=&quot;Registered&quot;;
-alert(&quot;New owner is &quot; + tx.propertylisting.owner);
-alert(&quot;Status is &quot; + tx.propertylisting.Status);
+tx.propertylisting.Status="Registered";
+alert("New owner is" + tx.propertylisting.owner);
+alert("Status is " + tx.propertylisting.Status);
 sbalance= sbalance+ MktValue;
-alert(&quot;New Sbalance is &quot; + sbalance);
+alert("New Sbalance is " + sbalance);
 tx.seller.SBalance=sbalance;
 
 const OwnerRegistry = await getAssetRegistry(&#39;org.example.basic.PropertyListing&#39;);
@@ -144,7 +144,7 @@ const transferRequest = factory.newResource(namespace, &#39;PropertyListing&#39;
 // ifs aspects
 
 transferRequest.owner = ifs.cproperty.owner;
-alert(&quot;Owner is &quot; + transferRequest.owner);
+alert("Owner is " + transferRequest.owner);
 transferRequest.mktprice= ifs.cproperty.mktprice;
 transferRequest.RegistrationDate= ifs.cproperty.RegistrationDate;
 transferRequest.PropertyType= ifs.cproperty.PropertyType;
@@ -176,7 +176,7 @@ return getAssetRegistry(namespace+'.Property')
 async function Registered(pr){
 const namespace = &#39;org.example.basic&#39;;
 console.log(&#39;### onRegistered &#39; + pr.toString());
-if(pr.rpropertylisting.Status=&quot;Registered&quot;){
+if(pr.rpropertylisting.Status="Registered"){
 const propertyRegistry = await getAssetRegistry(namespace+&#39;.PropertyListing&#39;); // eslint-disable-line
 no-undef
 const transferAssetRegistry = await getAssetRegistry(namespace +&#39;.Property&#39;); // eslint-disable-line
@@ -189,12 +189,12 @@ const transferRequest = factory.newResource(namespace, &#39;Property&#39;, pr.PI
 // pr aspects
 
 transferRequest.owner = pr.rpropertylisting.owner;
-alert(&quot;Owner is &quot; + transferRequest.owner);
+alert("Owner is "+ transferRequest.owner);
 transferRequest.mktprice= pr.rpropertylisting.mktprice;
 transferRequest.RegistrationDate= pr.rpropertylisting.RegistrationDate;
 transferRequest.PropertyType= pr.rpropertylisting.PropertyType;
 transferRequest.Location= pr.rpropertylisting.Location;
-transferRequest.Status= &quot;Registered&quot;;
+transferRequest.Status= "Registered";
 transferRequest.IntentForSale= false;
 transferRequest.Public= false;
 transferRequest.Private= false;
