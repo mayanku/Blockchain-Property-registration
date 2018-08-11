@@ -155,6 +155,15 @@ await transferAssetRegistry.add(transferRequest);
 }
 
 }
+  var property= ifs.cproperty.PID;     
+// Get the property asset registry.
+return getAssetRegistry(namespace+'.Property')
+  .then(function (propertyAssetRegistry) {
+    // Get the factory for creating new asset instances.
+    var factory = getFactory();
+    // Remove the property from the property asset registry.
+    return propertyAssetRegistry.remove(property);
+  });
 }
 }
 
